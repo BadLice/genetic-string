@@ -1,6 +1,6 @@
-var target = "to be or not to be";
+var target = "tretatre trentini enrtarono tutti e trentatre trotterellando";
 var mutationRate = 0.01;
-var maxPop = 200;
+var maxPop = 1000;
 var people;
 
 function setup()
@@ -9,7 +9,6 @@ function setup()
   people.calculateFitness();
 
   bestPhrase = createP("Best phrase:");
-  //bestPhrase.position(10,10);
   bestPhrase.class("best");
 
   allPhrases = createP("All phrases:");
@@ -17,23 +16,16 @@ function setup()
   allPhrases.class("all");
 
   stats = createP("Stats");
-  //stats.position(10,200);
   stats.class("stats");
-  // noLoop();
 }
 
 function draw()
 {
-  // for(var o of pop.population)
-  //   console.log(o.genes);
-  // people.calculateFitness();
   people.naturalSelection();
-  // console.log("ok1")
   people.generate();
 
   people.calculateFitness();
-  // console.log("ok2")
- people.evaluate();
+  people.evaluate();
 
  if(people.finished) noLoop();
 
@@ -48,7 +40,6 @@ function displayInfo() {
   bestPhrase.html("Best phrase:<br>" + answer);
 
   let statstext = "total generations:     " + people.generation + "<br>";
-  // statstext += "average fitness:       " + nf(people.getAverageFitness()) + "<br>";
   statstext += "total population:      " + maxPop + "<br>";
   statstext += "mutation rate:         " + floor(mutationRate * 100) + "%";
 

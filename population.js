@@ -18,23 +18,6 @@ class Population
 
       naturalSelection()
       {
-        // this.matingPool = [];
-        // var maxFitness = this.maxFitness();
-        //
-        // console.log("max="+maxFitness)
-        //
-        // for(var i=0;i<this.population.length;i++)
-        // {
-        //   var size=floor(map(this.population[i].fitness,0,maxFitness,0,1)*100)
-        //
-        //   for(var j=0;j<size;j++)
-        //   {
-        //     this.matingPool.push(this.population[i]);
-        //   }
-        // }
-        //
-        // console.log("len="+this.matingPool.length);
-
         // Clear the ArrayList
         this.matingPool = [];
 
@@ -136,10 +119,7 @@ class Population
         {
           if(this.target===this.population[i].genes.join(""))
            {
-             // finish=true;
-             // break;
-             noLoop()
-             console.log(i)
+             noLoop();
            }
 
         }

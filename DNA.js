@@ -9,7 +9,6 @@ class DNA
     for(var i=0;i<this.target.length;i++)
       {
         this.genes[i] = DNA.newChar();
-        // this.calculateFitness();
       }
   }
 
@@ -22,7 +21,6 @@ class DNA
         score++;
 
     this.fitness = score / this.genes.length;
-    // console.log("fewuiuuuuuuuuuuuuuuuuuuuuuuuuuu="+this.fitness)
   }
 
   crossover(parent2)
@@ -46,13 +44,11 @@ class DNA
 
   mutate(mr)
   {
-    // console.log(mr)
       for(var i=0;i<this.genes.length;i++)
       {
         if(random(1)<mr)
         {
           this.genes[i]=DNA.newChar();
-          // console.log("neq")
         }
       }
   }
